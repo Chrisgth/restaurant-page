@@ -1,4 +1,5 @@
 export default function pageLoad() {
+    const body = document.querySelector('body')
     const header = document.createElement('header')
     const content = document.getElementById('content')
     const headline = document.createElement('h2')
@@ -9,6 +10,7 @@ export default function pageLoad() {
     for ( let i=0; i<3; i++ ) {
         let button = document.createElement('button')
         button.textContent = 'Button'
+        button.id = `btn${i}`
         header.appendChild(button)
     }
 
@@ -17,7 +19,7 @@ export default function pageLoad() {
     description.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui totam, ut mollitia optio fugit dolor id. Veritatis adipisci placeat sed.'
 
     descriptionDiv.appendChild(description)
-    content.appendChild(header)
+    body.prepend(header)
     content.appendChild(headline)
     content.appendChild(image)
     content.appendChild(description)
