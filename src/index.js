@@ -1,3 +1,4 @@
-import pageLoad from './page-load.js'
+import pageLoad from './page-load.js';
+import './style.css';
 
-pageLoad()
+pageLoad();
